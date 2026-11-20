@@ -891,7 +891,8 @@ html[dir=ltr] footer{padding-bottom:90px;} /* (T176) زر الواتساب ال�
   var of = window.fetch;
   window.fetch = function (u, o) {
     try {
-      if (typeof u === 'string' && u.indexOf('/api/') === 0) {
+      if (typeof u === 'string' && u.indexOf('/api/') === 0) u = 'https://carlift.pages.dev' + u;
+      if (typeof u === 'string' && u.indexOf('https://carlift.pages.dev/api/') === 0) {
         o = Object.assign({}, o || {});
         var hd = new Headers(o.headers || {});
         hd.set('X-Cl-Dev', did); if (fp) hd.set('X-Cl-Fp', fp);
