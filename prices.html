@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="light">
 <script>
 /* (T175) نفس لغة صفحة الحجز: في الإنجليزي اتجاه ltr + الترجمة اليدوية (en.js) */
 (function(){
@@ -18,24 +18,24 @@
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&family=Readex+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
 /* (T78، 2026-10-14، قرار المالك) نظام «الحجري الليلي»: داكن هادئ بلا بنفسجي (كان كحلي + ذهبي) */
-    --bg:#0e1b2c;
-    --bg-elevated:#15273f;
-    --bg-input:#1b3350;
-    --gold:#f8a01b;
-    --gold-bright:#ffb43d;
-    --bronze:#2a7bd0;
-    --ivory:#f2f7fd;
-    --ivory-dim:#a7bcd4;
-    --placeholder:#7b92ad;
+    --bg:#F2F4F5;
+    --bg-elevated:#ffffff;
+    --bg-input:#ffffff;
+    --gold:#1A6BBC;
+    --gold-bright:#14568F;
+    --bronze:#D5DBDE;
+    --ivory:#2F4248;
+    --ivory-dim:#56666C;
+    --placeholder:#6B7B81;
     --whatsapp:#25d366;
     --error:#bf5b4f;
-    --ink:#0e1b2c;
+    --ink:#F2F4F5;
     --radius:14px;
-    --shadow:0 14px 34px -18px rgba(0,0,0,.6);
+    --shadow:0 14px 34px -18px rgba(47,66,72,.14);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -52,10 +52,10 @@
   nav{
     display:flex;align-items:center;justify-content:space-between;
     padding:6px clamp(14px,4vw,40px);
-    border-bottom:1px solid rgba(90,150,225,.2);
+    border-bottom:1px solid rgba(26,107,188,.2);
     position:sticky;top:0;z-index:40;
     backdrop-filter:blur(10px);
-    background:rgba(14,27,44,.92);
+    background:rgba(255,255,255,.92);
   }
   .brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:17px;color:var(--ivory);text-decoration:none;letter-spacing:.3px;}
   .brand img{flex-shrink:0;height:30px;width:auto;display:block;}
@@ -63,7 +63,7 @@
   /* ---------- Prominent back button ---------- */
   .back-banner{
     display:flex;align-items:center;justify-content:center;gap:14px;
-    background:linear-gradient(135deg,var(--gold-bright),var(--gold) 55%,var(--bronze));
+    background:#fff;
     padding:14px 16px;
     margin:0;
   }
@@ -72,11 +72,11 @@
     background:var(--bg);color:var(--gold-bright);
     font-family:'Noto Sans Arabic',sans-serif;font-weight:800;font-size:clamp(14px,2.8vw,17px);
     padding:12px 28px;border-radius:999px;text-decoration:none;
-    box-shadow:0 10px 26px -8px rgba(0,0,0,.6);
+    box-shadow:0 10px 26px -8px rgba(47,66,72,.14);
     transition:transform .18s ease, box-shadow .18s ease;
-    border:1px solid rgba(120,170,235,.4);
+    border:1px solid rgba(26,107,188,.4);
   }
-  .back-btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 14px 32px -8px rgba(0,0,0,.7);}
+  .back-btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 14px 32px -8px rgba(47,66,72,.14);}
   .back-btn svg{transition:transform .18s ease;}
   .back-btn:hover svg{transform:translateX(6px);}
 
@@ -84,10 +84,10 @@
   .fab-back{
     position:fixed;bottom:22px;left:22px;z-index:50;
     display:flex;align-items:center;gap:10px;
-    background:linear-gradient(135deg,var(--gold-bright),var(--gold));
+    background:var(--gold);
     color:var(--ink);font-family:'Noto Sans Arabic',sans-serif;font-weight:800;font-size:14px;
     padding:12px 20px;border-radius:999px;text-decoration:none;
-    box-shadow:0 12px 28px -8px rgba(0,0,0,.6);
+    box-shadow:0 12px 28px -8px rgba(47,66,72,.14);
     transition:transform .18s ease, box-shadow .18s ease;
   }
   .fab-back:hover{transform:translateY(-2px) scale(1.03);}
@@ -107,7 +107,7 @@
   .price-grid{display:flex;flex-direction:column;gap:14px;text-align:right;}
   .price-line{
     background:var(--bg-elevated);
-    border:1px solid rgba(90,150,225,.3);
+    border:1px solid rgba(26,107,188,.3);
     border-right:4px solid var(--gold-bright);
     border-radius:14px;padding:18px 22px;
     box-shadow:var(--shadow);
@@ -118,14 +118,14 @@
   }
   .price-line::before{
     content:"";position:absolute;top:0;right:24px;left:24px;height:1px;
-    background:linear-gradient(90deg,transparent, rgba(120,170,235,.3), transparent);
+    background:linear-gradient(90deg,transparent, rgba(26,107,188,.3), transparent);
   }
 
   /* ملاحظة ختامية بخط واضح */
   .note{
     margin-top:35px;padding:16px 20px;border-radius:14px;
-    border:1px dashed rgba(90,150,225,.35);
-    background:rgba(90,150,225,.08);
+    border:1px dashed rgba(26,107,188,.35);
+    background:rgba(26,107,188,.08);
     color:var(--gold-bright);
     font-size:15px;
     font-weight:700;
@@ -135,6 +135,57 @@
 
   footer{text-align:center;padding:30px 16px 90px;color:var(--ivory-dim);font-size:13px;}
   footer a{color:var(--gold-bright);text-decoration:none;}
+</style>
+<style id="wasalni-theme">
+body{background:var(--bg);color:var(--ivory);}
+h1,h2,h3,.brand,.field-label,.submit-btn,.type-gate-card h2{font-family:'Readex Pro','Noto Sans Arabic',sans-serif;}
+nav{background:#fff;backdrop-filter:none;border-bottom:1px solid var(--bronze);}
+.brand{color:var(--ivory);font-weight:700;letter-spacing:0;}
+.prices-link{background:transparent;color:var(--gold);border:1.5px solid var(--gold);}
+.prices-link:hover{transform:none;background:var(--gold);color:#fff;}
+.hero h1{font-weight:700;letter-spacing:-.2px;}
+form{background:#fff;border:1px solid var(--bronze);border-radius:16px;box-shadow:none;}
+.field-label{font-weight:600;}
+.field-label .num{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;border-radius:50%;background:var(--accent);color:#2F4248;font-size:12px;font-weight:700;margin-left:8px;}
+.segmented label{background:#fff;border:1px solid var(--bronze);color:var(--ivory);font-weight:600;}
+.segmented label:hover{border-color:var(--gold);}
+.segmented input:checked + label{background:var(--gold);color:#fff;border-color:var(--gold);box-shadow:inset 0 -3px 0 var(--accent);}
+#orderTypeSegmented label{border:1px solid var(--bronze);}
+input[type=text],input[type=number],input[type=tel],textarea#notes,#tripTimeDisplay,.budget-payment-row select{background-color:#fff;border:1px solid #B9C3C7;color:var(--ivory);}
+input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(26,107,188,.15);}
+.phone-input-row .phone-prefix{background:#EEF3F8;border:1px solid #B9C3C7;color:var(--gold-bright);}
+input.loc-link-input{border:1px solid #B9C3C7;background:#F7F9FA;}
+.add-stop-tab,#addStopBtn{background:#F7F9FA;border-color:#B9C3C7;color:var(--gold);}
+.submit-btn{background:var(--gold);color:#fff;border-radius:12px;box-shadow:inset 0 -3px 0 var(--accent);}
+.submit-btn:hover{transform:none;background:var(--gold-bright);}
+.loc-hint,.info-hint{background:#EEF3F8;border:1px solid #C9D6E2;color:var(--gold-bright);}
+.error-banner{background:#FDECEA;border:1px solid #F2B8B5;color:#B42318;}
+.stop-remove-btn{color:#B42318;}
+.type-gate{background:rgba(255,255,255,.98);backdrop-filter:none;}
+.type-gate-btn{background:#fff;border:1px solid var(--bronze);}
+.type-gate-btn:hover{background:var(--gold);color:#fff;transform:none;box-shadow:none;}
+.map-pick-confirm{background:var(--gold);color:#fff;}
+.cl-ac-list{background:#fff;border:1px solid var(--bronze);box-shadow:0 6px 18px rgba(47,66,72,.14);}
+.cl-ac-item:hover,.cl-ac-item.active{background-color:#EEF3F8;}
+.stepper button{background:#fff;border:1px solid var(--gold);color:var(--gold);}
+.lang-btn{color:var(--ivory);border-color:#B9C3C7;}
+.wa-float-btn{box-shadow:0 2px 8px rgba(47,66,72,.25);}
+</style>
+<style id="wasalni-theme">
+h1,h2,h3,.brand,main h1{font-family:'Readex Pro','Noto Sans Arabic',sans-serif;}
+:root{--ink:#fff;--error:#B42318;--shadow:none;}
+nav{background:#fff;backdrop-filter:none;border-bottom:1px solid var(--bronze);}
+.brand{font-weight:700;letter-spacing:0;}
+.brand img{height:34px;border-radius:9px;}
+.back-banner{background:#fff;border-bottom:1px solid var(--bronze);}
+.back-btn{background:#fff;border:1.5px solid var(--gold);color:var(--gold);box-shadow:none;}
+.back-btn:hover{transform:none;box-shadow:none;background:var(--gold);color:#fff;}
+.fab-back{background:var(--gold);color:#fff;box-shadow:0 2px 8px rgba(47,66,72,.25);}
+.fab-back:hover{transform:none;background:var(--gold-bright);}
+main h1{font-weight:700;}
+.price-line{background:#fff;border:1px solid var(--bronze);border-right:4px solid var(--accent);border-radius:12px;box-shadow:none;}
+.price-line::before{display:none;}
+.note{background:#EEF3F8;border:1px solid #C9D6E2;}
 </style>
 </head>
 <body>
