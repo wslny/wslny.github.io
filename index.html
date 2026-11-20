@@ -23,6 +23,7 @@ function __t(s) { return (window.__clEnOn && window.__clTr && window.__clTr(s)) 
 <meta name="description" content="وصلني، خدمة سائق خاص مع سيارة في دبي، احجز مشوارك أو طلبيتك خلال دقيقة.">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -527,7 +528,7 @@ input.loc-link-input{border:1px solid #B9C3C7;background:#F7F9FA;}
 </nav>
 <section class="hero">
 <h1>وجهتك التالية تبدأ هنا</h1>
-<p>عليك تفاصيل رحلتك أو طلبيتك، وسنتولى الباقي. طلبك يصل مباشرة إلى المناديب.</p>
+<p>طلبك يصل مباشرة إلى المناديب.</p>
 </section>
 <main>
 <style>/* (T203) بطاقة الطلب الشهري: إلغاء النشر/التوزيع */
@@ -928,7 +929,7 @@ input.loc-link-input{border:1px solid #B9C3C7;background:#F7F9FA;}
 })();
 </script>
 <script>
-const WHATSAPP_NUMBER = "17822232069";
+const WHATSAPP_NUMBER = "971555830443";
 /* (T76) خانة الاسم: هل فيها رابط؟ */
 function hasLinkInText(v) { return /https?:\/\/|www\.|maps\.app|goo\.gl|maps\.google|google\.[a-z.]+\/maps/i.test(String(v || '')); }
 (function (init) { if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init(); })(function () {
@@ -3656,6 +3657,7 @@ initTypeGate();
   var seg = document.getElementById('orderTypeSegmented'), fs = seg && seg.closest('fieldset');
   if (fs) fs.style.display = 'none';
   try { renumberFields(); } catch (e) {} // الترقيم يبدأ من 1 بعد إخفاء «نوع الطلب»
+  window.addEventListener('load', function(){ try { __applyTypeUI(false); renumberFields(); } catch (e) {} });
 })();
 (function initCustomerPhoneSmartInput() {
 const phoneInput = document.getElementById('customerPhone');

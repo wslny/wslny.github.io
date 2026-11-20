@@ -26,7 +26,7 @@
 "كارلفت الأبطال — احجز مشوارك الخاص": "Abtal Carlift — Book your private ride",
 "الأسعار": "Prices",
 "وجهتك التالية تبدأ هنا": "Your next destination starts here",
-"عليك تفاصيل رحلتك أو طلبيتك، وسنتولى الباقي. طلبك يصل مباشرة إلى المناديب.": "Enter your trip or delivery details, we handle the rest. Your request goes straight to drivers.",
+"طلبك يصل مباشرة إلى المناديب.": "Your request goes straight to drivers.",
 "ماهو نوع طلبك؟": "What do you need?",
 "يرجى الاختيار بعناية لأنه سيؤثر على الاختيارات وقبول طلبك.": "Choose carefully; it affects your options and acceptance.",
 "مشوار (دبي والشمالية)": "Ride (Dubai & North)",
