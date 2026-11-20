@@ -3634,6 +3634,7 @@ initTypeGate();
   r.dispatchEvent(new Event('change', { bubbles: true }));
   var seg = document.getElementById('orderTypeSegmented'), fs = seg && seg.closest('fieldset');
   if (fs) fs.style.display = 'none';
+  try { renumberFields(); } catch (e) {} // الترقيم يبدأ من 1 بعد إخفاء «نوع الطلب»
 })();
 (function initCustomerPhoneSmartInput() {
 const phoneInput = document.getElementById('customerPhone');
